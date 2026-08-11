@@ -1,4 +1,14 @@
-from app import conectar_bd
+from conexio import Database
+
+def ejecutar_jenkins():
+    db = Database()
+    db.connect()
+
+    print("Jenkins ejecutó el proyecto correctamente")
+
+    if db.get_connection():
+        db.close()
+
 
 if __name__ == "__main__":
-    conectar_bd()
+    ejecutar_jenkins()
