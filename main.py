@@ -4,7 +4,7 @@ def ejecutar_jenkins():
     db = Database()
     db.connect()
 
-    print("Jenkins ejecutó el proyecto correctamente")
+    print("Jenkins ejecuto el proyecto correctamente")
 
     if db.get_connection():
         db.close()
