@@ -5,8 +5,7 @@ class Database:
         self.connection = None
 
     def connect(self):
-        
-        #Se usa try-except para manejar errores y evitar que el programa se detenga inesperadamente
+        # Se usa try-except para manejar errores
         try:
             self.connection = psycopg2.connect(
                 host="localhost",
@@ -15,10 +14,10 @@ class Database:
                 database="taller",
                 port="5432"
             )
-            print("✅ Conectado a PostgreSQL")
+            print("Conectado a PostgreSQL")
 
         except Exception as e:
-            print("❌ Error de conexión:", e)
+            print("Error de conexion:", e)
 
     def get_connection(self):
         return self.connection
@@ -26,7 +25,8 @@ class Database:
     def close(self):
         if self.connection:
             self.connection.close()
-            print("🔌 Conexión cerrada")
+            print("Conexion cerrada")
+
 
 db = Database()
 db.connect()
