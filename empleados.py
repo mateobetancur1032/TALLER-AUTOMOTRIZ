@@ -11,7 +11,7 @@ class Empleado:
 # Empleados especializados por servicio
 empleados_servicio = {
     "Cambio de aceite": Empleado(
-        1, "Carlos", "3001111111",
+        1, "Calvito Lubricador", "3001111111",
         "Lubricador", 2000000, "8AM - 5PM"
     ),
 
